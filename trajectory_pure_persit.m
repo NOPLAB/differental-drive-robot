@@ -2,7 +2,7 @@ clear;
 clc;
 
 % 画像を読み込み
-img = imread("github.jpg");
+img = imread("github.png");
 % imshow(img);
 
 points = img2points(img);
@@ -59,8 +59,8 @@ while( distanceToGoal > goalRadius )
     % Compute the controller outputs, i.e., the inputs to the robot
     [v, omega, next] = controller(robotCurrentPose);
 
-    w1 = (2*v - L * omega) / 2;
-    w2 = (2*v + L * omega) / 2;
+    w1 = (2*v - l * omega) / 2;
+    w2 = (2*v + l * omega) / 2;
 
     res_w1 = [res_w1 w1];
     res_w2 = [res_w2 w2];

@@ -2,7 +2,7 @@ clear;
 clc;
 
 % 画像を読み込み
-img = imread("github.jpg");
+img = imread("github.png");
 % imshow(img);
 
 points = img2points(img);
